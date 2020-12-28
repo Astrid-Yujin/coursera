@@ -58,6 +58,12 @@ body {
   margin-top: -42px;
   padding: 6px 4px;
 }
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #ddd;
+}
 .navbar-toggle .icon-bar {
   width: 30px;
   border-radius: 3px;
