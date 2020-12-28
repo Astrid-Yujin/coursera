@@ -74,7 +74,7 @@ body {
 #page-heading {
   margin-bottom: 32px;
 }
-section {
+#main-content .row {
   background-color: #C0C0C0;
   min-height: 100vh;
 }
