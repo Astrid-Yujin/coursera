@@ -1,0 +1,137 @@
+body {
+  font-size: 16px;
+  font-family: Cursive, sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  min-height: 60px;
+  background-color: #C0C0C0;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0
+}
+
+.navbar-brand h1 { /* Company name */
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid #000;
+}
+#nav-list li {
+  background-color: #000;
+}
+#nav-list a {
+  color: #fff;
+  text-align: center;
+  border: 1px solid #000;
+}
+#nav-list a:hover {
+  color: #000;
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 3px solid #000;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #C0C0C0;
+}
+.navbar-header button.navbar-toggle:focus, .navbar-header button.navbar-toggle:focus .icon-bar {
+  border: 3px solid #ddd;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -42px;
+  padding: 6px 4px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #ddd;
+}
+.navbar-toggle .icon-bar {
+  width: 30px;
+  border-radius: 3px;
+}
+/* END HEADER */
+
+/* MAIN CONTENT */
+#page-heading {
+  margin-bottom: 32px;
+}
+#main-content section {
+  position: relative;
+  padding: 16px;
+  margin-bottom: 30px;
+  background-color: #C0C0C0;
+}
+section .title {
+  margin-top: 0;
+}
+section .btn-return {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+/* END MAIN CONTENT */
+
+.is-font-weight-bold {
+  font-weight: bold;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  #main-content section {
+    min-height: 100vh;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #main-content section {
+    min-height: 100vh;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  #main-content section {
+    min-height: 50vh;
+  }
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  #main-content section {
+    min-height: 35vh;
+  }
+  .collapsable-wrapper {
+    margin-left: -15px; /* 15px horizontal padding from .container-fluid */
+    margin-right: -15px; /* 15px horizontal padding from .container-fluid */
+  }
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  .collapsable-wrapper {
+    margin-left: -15px; /* 15px horizontal padding from .container-fluid */
+    margin-right: -15px; /* 15px horizontal padding from .container-fluid */
+  }
+
+}
