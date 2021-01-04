@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Module 4 Solution</title>
+  <style type="text/css">
+  	h1 {
+  		text-align: center;
+  	}
+  	#console {
+  		min-width: 50%;
+  		max-width: 800px;
+  		height: 90vh;
+  		padding: 5px 10px;
+  		line-height: 1.4;
+  		margin: 1rem auto;
+  		background: #000;
+  		color: #fff;
+  	}
+  	.prompt {
+  		margin-top: 10px;
+  	}
+  </style>
+  <script>
+    var names = []; // DO NOT REMOVE
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Welcome 2021!</h1>
+  <!-- tabindex attr to enable 'onkeypress' event on div element -->
+  <div id="console" tabindex="0" onkeypress="handleKeyPress(event)">
+  	<div id="anchor">
+  		Result as follow: 
+  	</div>
+  	<div class="prompt">Please press enter to continue...</div>
+  	<div style="display: none">C:\User\<span id="underscore">_</span></div>
+  </div>
+</body>
+  <script>
+  function handleKeyPress(e){
+	 var key=e.keyCode || e.which;
+	  if (key==13) { // Enter key
+	     location.reload();
+	  }
+	}
+	function underscoreAnimation() {
+    // wink every 5 seconds
+    setInterval(() => {
+        setTimeout(() => {
+            document.getElementById('underscore').style.display = 'none';
+        }, 500);        
+
+        setTimeout(() => {
+            document.getElementById('underscore').style.display = 'inline';
+        }, 1000);
+    }, 1000);
+	}
+	var text = $('.prompt').text();
+	var length = text.length;
+	var timeOut;
+	var character = 0;
+	(function typeWriter() { 
+	    timeOut = setTimeout(function() {
+	        character++;
+	        var type = text.substring(0, character);
+	        $('.prompt').text(type);
+	        typeWriter();
+
+	        if (character == length) {
+	            clearTimeout(timeOut);
+	            underscoreAnimation();
+	            $('.prompt + div').show();
+	        }
+	    }, 150);
+	}());
+
+  </script>
+  <script src="SpeakHello.js"></script>
+  <script src="SpeakGoodBye.js"></script>
+  <script src="script.js"></script>
+</html>
